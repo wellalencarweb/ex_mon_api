@@ -1,5 +1,5 @@
-docker-compose up --build -d pgsqldb
 docker-compose run --rm app chown -R $(id -u):$(id -g) .
+docker-compose up --build -d pgsqldb
 docker-compose run --service-ports --rm app
 
 
@@ -16,9 +16,27 @@ mix test (sair do iex para poder rodar!)
 
 mix phx.new ex_mon_api --no-webpack --no-html
 
+
+
+
+
+
 Then configure your database in config/dev.exs and run:
 
     $ mix ecto.create
+    $ mix ecto.drop
+    $ mix ecto.gen.migration create_trainer_table
+    $ mix ecto.migrate
+
+params = %{name: "TOM", password: "123456"}
+
+changeset = ExMonApi.Trainer.changeset(params)
+
+ExMonApi.Repo.insert(changeset)
+
+
+
+
 
 Start your Phoenix app with:
 

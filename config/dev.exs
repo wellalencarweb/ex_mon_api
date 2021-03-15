@@ -5,10 +5,14 @@ config :ex_mon_api, ExMonApi.Repo,
   username: "postgres",
   password: "postgres",
   database: "ex_mon_api_dev",
-  hostname: "localhost",
+  hostname: "192.168.32.3",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
 
+  # username: "ryevwvyt",
+  # password: "5k_uT_qnmgHrT6tBi3nc1V8Z9D18Dt8p",
+  # database: "ryevwvyt",
+  # hostname: "queenie.db.elephantsql.com",
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #

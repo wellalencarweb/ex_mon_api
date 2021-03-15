@@ -23,9 +23,9 @@ services:
       - "./data/postgres:/var/lib/postgresql/data"
     ports:
       - "15432:5432"
-    # networks:
-    #   default:
-    #     ipv4_address: 172.50.1.30
+    networks:
+      default:
+        ipv4_address: 192.168.32.3
 
 volumes:
   studying-elixir:
