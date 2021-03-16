@@ -28,4 +28,4 @@ ex_mon_api-*.tar
 /priv/static/
 
 # Ignore DataBase
-/data/postgres
+/data/postgres/
