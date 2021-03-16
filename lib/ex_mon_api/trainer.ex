@@ -12,6 +12,12 @@ defmodule ExMonApi.Trainer do
   end
 
   @required_params [:name, :password]
+
+  def build(params) do
+    params
+    |> changeset()
+    |> apply_action(:insert)
+  end
   # Como se fosse um pipeline
   def changeset(params) do
     %__MODULE__{}                               # nome da struct
