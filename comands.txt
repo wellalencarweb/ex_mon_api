@@ -38,6 +38,8 @@ ExMonApi.Repo.insert(changeset)
 
 ExMonApi.create_trainer(params)
 
+ExMonApi.Repo.all(ExMonApi.Trainer)
+
 mix phx.routes
 
 
