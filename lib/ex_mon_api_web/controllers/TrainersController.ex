@@ -29,5 +29,5 @@ defmodule ExMonApiWeb.TrainersController do
     |> text("")
   end
 
-  defp handle_response({:error, _reason} = error, conn), do: error
+  defp handle_delete({:error, _reason} = error, conn), do: error
 end
